@@ -1,0 +1,16 @@
+Android application to manage all your online transactions and offline expenses. This app automatically tracks your expenses when you receive a spend related SMS.
+
+
+Features:
+
+1. Add an expense manually in the 'Add New' tab.
+2. In the 'Set limit' tab, set the amount you want to spend within a time period and the beginning and end dates of that period. App will notify when that limit is reached.
+3. Current status of limit, ie. amount spend, days remaining and amount safe to spend, is displayed on home screen in an attractive interface.
+4. View all expenses in monthly tabulated form in 'All Expenses' tab.
+5. 'Offers Tab' shows any current offer available. App reads discounts/offers received through SMS.
+6. Edit/Delete any previous expense.
+
+
+Developer:
+
+Bibhor Chauhan (cbibhor@gmail.com)

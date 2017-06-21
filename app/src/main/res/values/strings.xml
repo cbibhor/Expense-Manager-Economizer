@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Expense Manager &amp; Economizer</string>
+    <string name="latest_transactions">Latest Expenses</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="add_new_transaction">Add New Expense</string>
+    <string name="rupeeSymbol">₹</string>
+    <string name="textAbout">Manage all your expenses, online transactions and cash payments. App automatically tracks your spends when you receive a spend related SMS.\nIn <b>\'Add New\'</b> tab, you can add a new expense.\nIn <b>\'Set Limit\'</b> tab, set the amount you want to spend within a time period and the beginning and end dates of that period. On home screen you can view your current status ie. amount spent, days remaining and amount safe to spend.\nIn <b>\'All Expenses\'</b> tab, view all your expenses in a monthly tabulated form.\nIn <b>\'Offers\'</b> tab, you can view any current offers available. App reads discounts/offers recieved through SMS.\nOther options include to Edit or Delete any expense.
+    </string>
+
+</resources>

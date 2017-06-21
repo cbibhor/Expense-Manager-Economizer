@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.cbibhor.eme.expensemanagereconomizer.MainActivity">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:background="#ffffff">
+
+        <RelativeLayout
+            android:id="@+id/layoutR"
+            android:layout_width="fill_parent"
+            android:layout_height="0px"
+            android:layout_weight="2"
+            android:background="@drawable/bg_shp_res">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorPrimary"
+                android:alpha="0.8"/>
+
+            <RelativeLayout
+                android:id="@+id/appTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:background="@color/colorPrimary">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Expense Manager &amp; Economizer"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                    android:textColor="@android:color/white"
+                    android:fontFamily="monospace"
+                    android:gravity="center"
+                    android:background="@android:color/transparent"/>
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/ic_about"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_about"
+                android:layout_alignParentRight="true"
+                android:paddingRight="4dp"
+                android:paddingTop="10dp"/>
+
+            <View
+                android:id="@+id/titleSeparator"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@android:color/white"
+                android:layout_below="@id/appTitle" />
+
+            <TextView
+                android:id="@+id/helpText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/titleSeparator"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@android:color/white"
+                android:textStyle="italic"
+                android:fontFamily="sans-serif"
+                android:text="Set Limit &amp; \n Manage Your Expenses"
+                android:layout_marginTop="40dp"
+                android:gravity="center"
+                android:layout_centerInParent="true" />
+
+            <TextView
+                android:id="@+id/txtSpent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Spent"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@android:color/white"
+                android:textStyle="italic"
+                android:fontFamily="sans-serif"
+                android:layout_below="@id/appTitle"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:paddingBottom="4dp"/>
+
+            <TextView
+                android:id="@+id/txtSafe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Safe To Spend"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@android:color/white"
+                android:textStyle="italic"
+                android:fontFamily="sans-serif"
+                android:layout_below="@id/appTitle"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp" />
+
+            <LinearLayout
+                android:id="@+id/bars"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@id/txtSpent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+
+                <LinearLayout
+                    android:id="@+id/bar_spend"
+                    android:layout_width="0px"
+                    android:layout_height="30dp"
+                    android:layout_weight="1">
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/holo_red_light" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/bar_safe"
+                    android:layout_width="0px"
+                    android:layout_height="30dp"
+                    android:layout_weight="2">
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/holo_green_light" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/amtSpent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rupeeSymbol"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@android:color/white"
+                android:fontFamily="sans-serif"
+                android:layout_below="@id/txtSpent"
+                android:layout_marginLeft="15dp" />
+
+            <TextView
+                android:id="@+id/amtSafe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rupeeSymbol"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@android:color/black"
+                android:fontFamily="sans-serif"
+                android:layout_below="@id/txtSpent"
+                android:layout_marginRight="15dp"
+                android:layout_alignParentRight="true"/>
+
+            <View
+                android:id="@+id/barlineTop"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@android:color/white"
+                android:layout_below="@id/txtSpent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp" />
+
+            <View
+                android:id="@+id/barlineBottom"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@android:color/white"
+                android:layout_below="@id/txtSpent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="30dp"/>
+
+            <View
+                android:id="@+id/barlineLeft"
+                android:layout_width="2dp"
+                android:layout_height="30dp"
+                android:background="@android:color/white"
+                android:layout_below="@id/txtSpent"
+                android:layout_marginLeft="10dp" />
+
+            <View
+                android:id="@+id/barlineRight"
+                android:layout_width="2dp"
+                android:layout_height="30dp"
+                android:background="@android:color/white"
+                android:layout_below="@id/txtSpent"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentRight="true"/>
+
+            <LinearLayout
+                android:id="@+id/midDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@id/barlineBottom"
+                android:layout_marginTop="10dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Begin"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@android:color/white"
+                        android:textStyle="italic"
+                        android:gravity="center_horizontal"/>
+                    <TextView
+                        android:id="@+id/limitBeginDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@android:color/white"
+                        android:gravity="center_horizontal"/>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="70dp"
+                        android:background="@android:color/white"
+                        android:layout_alignParentLeft="true"/>
+                    <TextView
+                        android:id="@+id/numDays"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="35dp"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold"
+                        android:fontFamily="monospace"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center_horizontal"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Days Left"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@android:color/white"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center_horizontal"
+                        android:layout_below="@id/numDays"/>
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="70dp"
+                        android:background="@android:color/white"
+                        android:layout_alignParentRight="true"/>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="End"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@android:color/white"
+                        android:textStyle="italic"
+                        android:gravity="center_horizontal"/>
+                    <TextView
+                        android:id="@+id/limitEndDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@android:color/white"
+                        android:gravity="center_horizontal"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/latestTransactions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:paddingLeft="10dp"
+                android:paddingBottom="10dp"
+                android:textColor="@android:color/white"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:fontFamily="sans-serif"
+                android:textStyle="italic"
+                android:text="@string/latest_transactions" />
+
+            <View
+                android:id="@+id/linebelow"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@android:color/white"
+                android:layout_above="@id/latestTransactions"
+                android:layout_marginBottom="8dp"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/orecycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/linebelow"
+                android:background="@color/colorPrimary"/>
+
+            <View
+                android:id="@+id/lineabove"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@android:color/white"
+                android:layout_above="@id/orecycler_view"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/tcards"
+            android:layout_width="fill_parent"
+            android:layout_height="0px"
+            android:layout_weight="4"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:background="@android:color/transparent">
+
+            <TextView
+                android:id="@+id/textNoExpenses"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="No spend related SMS found.\nThis app will track your spends when you get SMSs.\nMeanwhile add your cash expense through 'Add New' above."
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@android:color/black"
+                android:fontFamily="sans-serif"
+                android:layout_centerInParent="true"
+                android:gravity="center"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/trecycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
